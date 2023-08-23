@@ -28,4 +28,3 @@ for linha in dados:
 
 # Feche a conexão
 conexao.close()
-

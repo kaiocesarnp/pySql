@@ -106,18 +106,3 @@ print(populacao_cidades['Uberlândia'])
 #Deletar registros:
 del populacao_cidades['Fortaleza']
 print(populacao_cidades)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

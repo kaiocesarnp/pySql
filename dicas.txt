@@ -1,0 +1,5 @@
+Sequência do aprendizado:
+
+cobra.py e cobra_banco.db;
+pands.py .. gera o arquivo python;
+livros.py e livros_autores.csv;
