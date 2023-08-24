@@ -1,0 +1,194 @@
+Dados: É a base da informação: Não possui significado atribuído e organização.
+Informação: É um dado que adquire significado a partir de uma análise.
+
+-------
+
+As estruturas de dados distinguem-se entre si pelo modo como as informações são armazenadas. Portanto, tanto a forma de armazenamento quanto as operações definidas sobre uma estrutura de dados são pontos que as diferem.
+
+-------
+
+Os mais importantes tipos de Dados Estruturados fornecidos pelas linguagens de programação modernas:
+
+Arranjos:
+Dados que são formados por diversos campos, podendo assim, 
+destacar os dados utilizados para a agregação de componentes do mesmo tipo, 
+com dimensão máxima pré-definida.
+
+Registros:
+Podem agregar componentes de tipos diferentes.
+
+Sequências:
+São utilizadas para conjuntos ordenados de componentes do mesmo tipo.
+
+Conjuntos:
+Define uma faixa de valores que os seus componentes podem assumir.
+
+-------
+
+É a partir dos tipos específicos de dados e da estrutura que carrega a informação para o software que estabelecemos os dois pilares de uma estrutura de dados: dados e estrutura.
+
+-------
+
+A realização de uma estrutura de dados possui como requisito determinadas operações:
+Adicionar um novo item ou elemento.
+Excluir um item existente.
+Realizar pesquisas e apontar um elemento.
+Realizar formas de classificação dos itens.
+
+-------
+
+Os dados não estruturados possuem uma organização aberta, isso significa que não é possível determinar o tamanho nem mesmo a rotulação do seu conteúdo.
+Dados que não são definidos sobre estruturas fixas e normatizadas, os dados não estruturados.
+áudio
+fotos
+vídeos
+textos, entre outros.
+
+-------
+
+Podemos ainda citar os dados semiestruturados, (clique no vídeo e amplie sua pesquisa https://www.youtube.com/embed/PCZgljKMSCg) forma de organização que combina características dos dados estruturados e não estruturados.
+
+-------
+
+Dados Estruturados
+Organização rígida pré-projetada
+Ex: bancos de dados
+
+Dados não estruturados	
+Estrutura flexível
+Ex: textos, vídeos, áudios, etc.
+
+Dados semiestruturados
+Não há estrutura pré-definida
+Ex: RDF, OWL
+
+-------
+
+Na prática, o SGBD é um conjunto de componentes de software que possibilitam aos usuários interagir com o banco de dados.
+Em português a sigla SGBD quer dizer Sistema gerenciador de banco de dados.
+
+-------
+
+A informação descrita no banco e armazenada pelo SGBD se expressa na forma de um 
+dicionário ou de um catálogo, que é chamado de metadados. 
+Já a manipulação de um BD significa o acionamento de funções de consulta e 
+recuperação de determinados dados, a atualização do banco e a geração 
+de relatórios relativos a esses dados.
+
+Não confunda o conceito de banco de dados com o seu sistema de gerenciamento (SGBD).
+
+-------
+
+Existem quatro propriedades fundamentais que definem os bancos de dados relacionais, que são as propriedades ACID 
+(Atomicidade, Consistência, Isolamento e Durabilidade):
+Atomicidade:
+É a definição de todos os elementos que fazem parte de uma transação completa do banco de dados.
+
+Consistência:
+Estabelece regras que mantêm a integridade dos pontos de dados depois de uma transação.
+
+Isolamento:
+Significa que o resultado de uma transação não aparece para outros usuários até que se confirme a finalização da transação.
+
+Durabilidade:
+É a garantia de que as modificações realizadas sobre os dados sejam permanentes com a confirmação do sucesso da transação.
+
+-------
+
+O gerenciamento, o armazenamento, a consulta e a recuperação de dados em um banco
+ relacional é feita por meio de um software, o RDBMS ou sistema de gerenciamento 
+de bancos relacionais, que provê a interface entre os usuários e as aplicações 
+com o banco de dados.
+
+Ele também desempenha funções administrativas de gerenciamento do armazenamento 
+de informações, de acesso aos dados e ao desempenho deles.
+
+-------
+
+Os bancos não relacionais NoSQL (Not Only SQL) surgem a partir da necessidade de lidar com um grande volume de dados que devem ser armazenados.
+
+-------
+
+O SQL (Structured Query Language) pode ser definido, de modo genérico, como um 
+artefato de software utilizado para armazenar, organizar, gerenciar e recuperar 
+dados ou informações contidas em um banco de dados.
+
+O SQL funciona com base em um computador com um banco de dados instalado, o qual 
+podem ter armazenados os mais diversos tipos de informações, dependendo de o 
+sistema pertencer a uma pessoa ou a uma empresa.
+
+Quem controla o banco de dados no computador é um sistema chamado de Sistema de 
+Gerenciamento de Banco de Dados, que é o acrônimo da sigla DBMS (Database Management System).
+
+-------
+
+Os atributos podem ser definidos como:
+
+Simples					Composto
+É um atributo não divisível. 		Pode ser segmentado.
+					
+Há também outros atributos que complementam a modelagem MER
+
+Monovalorado:
+É o caso em que ele possui apenas um valor que se relaciona com determinada entidade. 
+Por exemplo, a entidade “funcionário” pode receber apenas um valor de CPF.
+
+Multivalorado:
+Como o próprio nome diz, quer dizer que uma mesma entidade pode receber mais de 
+um valor. Um exemplo é o atributo “telefone”, pois uma mesma pessoa pode possuir 
+mais de um número de telefone.
+
+Relacional:
+São atributos que mantêm relações entre si, por exemplo: 
+Festa (entidade), Endereço e Data (atributos).
+
+Descritivo:
+Expressam características inerentes a certa entidade, por exemplo: 
+a idade, a cor, a cidade de nascimento, entre outras.
+
+Armazenado:
+São os que definimos previamente.
+
+Derivado:
+É o atributo que podemos obter a partir dos atributos armazenados, por exemplo: 
+imagine que o atributo data de nascimento esteja definido no banco de dados. 
+Usando este atributo como referência, podemos obter de modo “indireto” 
+o atributo idade.
+
+-------
+
+Agora vamos conhecer algumas Query’s e suas respectivas funções:
+
+SELECT:
+Retorna colunas de uma tabela, também pode exibir dados que não pertencem a 
+uma coluna de tabela.
+
+ORDER BY:
+Pode ordenar um grupo de resultados por meio de itens da seleção SELECT.
+
+FIELDS:
+Visualiza os campos em ordem crescente.
+
+HAVING:
+Apresenta dados selecionados por um filtro especificamente.
+
+WHILE:
+Consulta vários dados simultaneamente.
+
+-------
+
+Exigências ACID (atomicidade, consistência, isolamento e durabilidade).
+
+-------
+
+MÓDULO 04:
+
+A função que anexa o arquivo ao banco de dados é a chamada sqlite3_open().
+
+
+
+
+
+
+
+
