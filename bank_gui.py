@@ -1,32 +1,42 @@
-from tkinter import *
+#Produzir uma aplicação (um CRUD) de clientes em Python que pode receber e cadastrar um banco de clientes.
+#CRUD, ou seja: ler, escrever, atualizar e apagar (Create, Read, Update e Delete)
 
-class Gui():
-    x_pad = 5
+#Importação do tkinter e definição do paddle
+from tkinter import * #este módulo é utilizado sempre que temos que desenvolver uma interface gráfica
+
+class Gui(): #definimos uma classe chamada GUI ("Graphical User Interface”) fazendo referência a Interface Gráfica do Usuário
+    x_pad = 5 #x_pad e x_pad fazem referência a uma propriedade padding que estabelece o distanciamento entre o conteúdo de um elemento e a sua borda.
     y_pad = 3
-    width_entry = 30
+    width_entry = 30 #A variável width_entry = 30 irá definir a largura da janela.
 
+#Criando uma janela para a aplicação
     def __init__(self):
         self.window = Tk()
         self.window.wm_title("PYSQL versão 1.0")
 
+# Definição das variáveis que recebem os dados inseridos pelo usuário
         self.txtNome = StringVar()
         self.txtSobrenome = StringVar()
         self.txtEmail = StringVar()
         self.txtCPF = StringVar()
 
+#O argumento window é o que define a qual janela o Label deve pertencer.
         self.lblnome = Label(self.window, text="Nome")
         self.lblsobrenome = Label(self.window, text="Sobrenome")
         self.lblemail = Label(self.window, text="E-mail")
         self.lblcpf = Label(self.window, text="CPF")
-
+        
+# Campos de entrada
         self.entNome = Entry(self.window, textvariable=self.txtNome, width=self.width_entry)
         self.entSobrenome = Entry(self.window, textvariable=self.txtSobrenome, width=self.width_entry)
         self.entEmail = Entry(self.window, textvariable=self.txtEmail, width=self.width_entry)
         self.entCPF = Entry(self.window, textvariable=self.txtCPF, width=self.width_entry)
 
+# Lista de clientes e scrollbar
         self.listClientes = Listbox(self.window, width=100)
         self.scrollClientes = Scrollbar(self.window)
 
+# Botões
         self.btnViewAll = Button(self.window, text="Ver todos")
         self.btnBuscar = Button(self.window, text="Buscar")
         self.btnInserir = Button(self.window, text="Inserir")
@@ -34,6 +44,7 @@ class Gui():
         self.btnDel = Button(self.window, text="Deletar Selecionados")
         self.btnClose = Button(self.window, text="Fechar")
 
+#Associar os objetos criados ao Grid da Janela
         self.lblnome.grid(row=0, column=0)
         self.lblsobrenome.grid(row=1, column=0)
         self.lblemail.grid(row=2, column=0)
@@ -54,9 +65,11 @@ class Gui():
         self.btnDel.grid(row=8, column=0, columnspan=2)
         self.btnClose.grid(row=9, column=0, columnspan=2)
 
+#Conectando o Scrollbar com a ListBox
         self.listClientes.configure(yscrollcommand=self.scrollClientes.set)
         self.scrollClientes.configure(command=self.listClientes.yview)
 
+#Adicionando estilo (swag)
         for child in self.window.winfo_children():
             widget_class = child.__class__.__name__
             if widget_class == "Button":
