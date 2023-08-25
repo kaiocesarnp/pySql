@@ -56,7 +56,7 @@ def view():
     trans = TransactionObject()
     trans.connect()
     trans.execute("SELECT * FROM clientes")
-    rows = trans.fetchall()
+    rows = trans.cur.fetchall()
     trans.disconnect()
     return rows
 
